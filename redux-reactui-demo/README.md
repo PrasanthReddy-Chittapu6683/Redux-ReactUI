@@ -1,3 +1,28 @@
+
+# Hi Friends Welcome !!!!!
+
+
+###  For better understanding on Redux feature, How it works? I recommend you guys go throgth my `[Redux-JavaScript](https://github.com/PrasanthReddy-Chittapu6683/Redux-JavaScript/blob/master/README.md)` repositry  for better understanding and come back here
+
+__`Lets start with Redux using React UI`__
+
+
+*   __`Let see the steps how Redux work with React UI application`__
+        ![](./images/Image1.PNG)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
