@@ -2,7 +2,7 @@
 # Hi Friends Welcome !!!!!
 
 
-###  For better understanding on Redux feature, How it works? I recommend you guys go throgth my `[Redux-JavaScript](https://github.com/PrasanthReddy-Chittapu6683/Redux-JavaScript/blob/master/README.md)` repositry  for better understanding and come back here
+###  For better understanding on Redux feature, How it works? I recommend you guys go throgth my [Redux-JavaScript](https://github.com/PrasanthReddy-Chittapu6683/Redux-JavaScript/blob/master/README.md) repositry  for better understanding and come back here
 
 __`Lets start with Redux using React UI`__
 
@@ -598,11 +598,13 @@ __`Lets see How to use Hooks in Redux`__
                 }
             }
             export default connect(mapStateToProps, mapDispatchToProps)(AsyncUserContainer)
+          ```
 *   __`Output`__
-    ![](images/Image9.png)
-    ![](images/Image10.png)
+    *   ![](./images/Image9.PNG)
+    *   ![](./images/Image10.PNG)
+    
 
-        ```
+        
 
 
 
