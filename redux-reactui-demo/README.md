@@ -379,38 +379,39 @@ __`Lets see How to use Hooks in Redux`__
 ### `mapStateToProps`
 
 *    In `mapStateToProps` we can able to pass 2nd paramert as ownProps means we can send our own props. Refer the code in `ItemContainer.js`
-    ``` javascript
-        import React from 'react'
-        import { connect } from 'react-redux'
+    *   ``` javascript
+                import React from 'react'
+                import { connect } from 'react-redux'
 
-        function ItemContainer(props) {
-            return (
-                <div>
-                    <h2>Item - {props.item}</h2>
-                </div>
-            )
-        }
+                function ItemContainer(props) {
+                    return (
+                        <div>
+                            <h2>Item - {props.item}</h2>
+                        </div>
+                    )
+                }
 
-        const mapStateToProps = (state, ownProps) => {
-            const itemState = ownProps.cake ? state.cake.numOfCakes : state.iceCream.numOfIceCremas
-            return {
-                item: itemState
-            }
-        }
+                const mapStateToProps = (state, ownProps) => {
+                    const itemState = ownProps.cake ? state.cake.numOfCakes : state.iceCream.numOfIceCremas
+                    return {
+                        item: itemState
+                    }
+                }
 
-        export default connect(mapStateToProps)(ItemContainer)
+                export default connect(mapStateToProps)(ItemContainer)
 
-    ```
+        ```
 *   In App.js:
-    ``` javascript
-        <ItemContainer iceCream ></ItemContainer>
-        <ItemContainer cake></ItemContainer>
-    ```
+
+    *   ``` javascript
+                <ItemContainer iceCream ></ItemContainer>
+                <ItemContainer cake></ItemContainer>
+        ```
 
 ### `mapDispatchToProps`
 
 *   In  `mapDispatchToProps` is a function wich accepts 2 parameters `dispatch` & `ownProps`. Refer the code in `ItemContainer.js`
-    ``` javascript
+    *   ``` javascript
             import React from 'react'
             import { connect } from 'react-redux'
             import { buyCake, buyIceCream } from '../Redux'
