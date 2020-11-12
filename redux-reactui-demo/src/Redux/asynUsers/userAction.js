@@ -1,43 +1,47 @@
 import {
-    FETCH_USERS_REQUEST,
-    FETCH_USERS_SUCCESS,
-    FETCH_USERS_FAILURE
+    FETCH_USERS_REQUEST_ACTION_TYPE,
+    FETCH_USERS_SUCCESS_ACTION_TYPE,
+    FETCH_USERS_FAILURE_ACTION_TYPE
 } from './userType'
 import axios from 'axios'
 
 
-export const fetchUsersRequest = () => {
+export const fetchUsersRequestAction = () => {
     return {
-        type: FETCH_USERS_REQUEST
+        type: FETCH_USERS_REQUEST_ACTION_TYPE,
+        payload: true
     }
 }
 
-export const fetchUsersSuccess = (users) => {
+export const fetchUsersSuccessAction = (users) => {
     return {
-        type: FETCH_USERS_SUCCESS,
+        type: FETCH_USERS_SUCCESS_ACTION_TYPE,
         payload: users
     }
 }
 
-export const fetchUsersFailure = (error) => {
+export const fetchUsersFailureAction = (error) => {
     return {
-        type: FETCH_USERS_FAILURE,
+        type: FETCH_USERS_FAILURE_ACTION_TYPE,
         payload: error
     }
 }
 
-export const fetchUsers = () => {
-    return (dispatch) => {
-        dispatch(fetchUsersRequest)
+export const fetchUsers_action_dispatcher = () => {
+    return (dispatchReducer) => {
+        dispatchReducer(fetchUsersRequestAction)
+
         axios.get('https://jsonplaceholder.typicode.com/users')
             .then(response => {
                 const users = response.data
-                dispatch(fetchUsersSuccess(users))
+                dispatchReducer(fetchUsersSuccessAction(users))
 
             })
             .catch(error => {
                 const errorMsg = error.message
-                dispatch(fetchUsersFailure(errorMsg))
+                dispatchReducer(fetchUsersFailureAction(errorMsg))
             })
+
+
     }
 }

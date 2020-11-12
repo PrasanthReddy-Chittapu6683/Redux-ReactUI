@@ -44,14 +44,14 @@ function App() {
             <NewCakeContainer></NewCakeContainer>
           </li>
           <li>
-            <h2>Redux - mapStateToProps</h2>
+            <h2>Redux - mapStateToProps & mapDispatchToProps</h2>
             <ItemContainer iceCream ></ItemContainer>
             <ItemContainer cake></ItemContainer>
           </li>
 
           <li>
             <h2>Async - Actions</h2>
-            <AsyncUserContainer></AsyncUserContainer>
+            <AsyncUserContainer user={'prcv'}></AsyncUserContainer>
           </li>
         </ul>
       </div>
